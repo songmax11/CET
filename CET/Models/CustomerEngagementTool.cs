@@ -9,9 +9,9 @@ namespace CET.Models
     {
         private List<Ticket> Tickets { get; set; }
 
-        public void CreateTicket(ApplicationsEnum app, TicketTypesEnum ticketType, UrgenciesEnum urg)
+        public void CreateTicket(int id, ApplicationsEnum app, TicketTypesEnum ticketType, UrgenciesEnum urg)
         {
-            Ticket ticket = new Ticket(app, ticketType, urg);
+            Ticket ticket = new Ticket(id, app, ticketType, urg);
             Tickets.Add(ticket);
         }
 

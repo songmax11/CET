@@ -6,7 +6,6 @@ namespace CET.Models
 {
     public class Ticket
     {
-		
 		public ApplicationsEnum Application { get; set; }
         public StatusesEnum Status { get; set; }
         public TicketTypesEnum TicketType { get; set; }
