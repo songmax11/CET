@@ -6,15 +6,20 @@ namespace CET.Models
 {
     public class Ticket
     {
-        private ApplicationsEnum Application { get; set; }
-        private StatusesEnum Status { get; set; }
-        private TicketTypesEnum TicketType { get; set; }
-        private UrgenciesEnum Urgency { get; set; }
-        private List<Action> Actions { get; set; }
-        private DateTime CreateDate { get; set; }
+		
+		public ApplicationsEnum Application { get; set; }
+        public StatusesEnum Status { get; set; }
+        public TicketTypesEnum TicketType { get; set; }
+        public UrgenciesEnum Urgency { get; set; }
+        public List<Action> Actions { get; set; }
+        public DateTime CreateDate { get; set; }
+		public User Owner { get; set; }
+		public User Submitter { get; set; }
+		public int Id { get; set; }
 
-        public Ticket(ApplicationsEnum Application, TicketTypesEnum TicketType, UrgenciesEnum Urgency)
+		public Ticket(int Id, ApplicationsEnum Application, TicketTypesEnum TicketType, UrgenciesEnum Urgency)
         {
+			this.Id = Id;
             this.Application = Application;
             this.TicketType = TicketType;
             this.Urgency = Urgency;

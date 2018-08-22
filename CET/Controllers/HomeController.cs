@@ -5,14 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CET.Models;
+using CET.Services;
 
 namespace CET.Controllers
 {
     public class HomeController : Controller
     {
+		private ITicketData _ticketData;
+		public HomeController(ITicketData ticketData)
+		{
+			_ticketData = ticketData;
+		}
         public IActionResult Index()
         {
-            return View();
+			var model = _ticketData.GetAll();
+            return View(model);
         }
 
         public IActionResult About()
