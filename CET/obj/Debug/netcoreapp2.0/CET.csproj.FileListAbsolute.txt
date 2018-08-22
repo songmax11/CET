@@ -1,0 +1,11 @@
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\bin\Debug\netcoreapp2.0\CET.deps.json
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\bin\Debug\netcoreapp2.0\CET.runtimeconfig.json
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\bin\Debug\netcoreapp2.0\CET.runtimeconfig.dev.json
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\bin\Debug\netcoreapp2.0\CET.dll
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\bin\Debug\netcoreapp2.0\CET.pdb
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\obj\Debug\netcoreapp2.0\CET.csprojAssemblyReference.cache
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\obj\Debug\netcoreapp2.0\CET.csproj.CoreCompileInputs.cache
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\obj\Debug\netcoreapp2.0\CET.AssemblyInfoInputs.cache
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\obj\Debug\netcoreapp2.0\CET.AssemblyInfo.cs
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\obj\Debug\netcoreapp2.0\CET.dll
+C:\Users\Max\Documents\Visual Studio 2017\Projects\CET\CET\obj\Debug\netcoreapp2.0\CET.pdb
