@@ -6,7 +6,7 @@ using static CET.Models.AttributesEnum;
 
 namespace CET.ViewModel
 {
-	public class TicketEditModel
+	public class TicketCreateModel
 	{
 		public ApplicationsEnum App { get; set; }
 		public TicketTypesEnum Type { get; set; }

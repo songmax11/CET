@@ -1,0 +1,18 @@
+﻿@using CET.Models
+@using static CET.Models.AttributesEnum
+@model Ticket
+
+<h1> Update CET @Model.Id </h1>
+
+<form method="post">
+    <select asp-for="Application"
+            asp-items="@Html.GetEnumSelectList<ApplicationsEnum>()"></select>
+    <select asp-for="TicketType"
+            asp-items="@Html.GetEnumSelectList<TicketTypesEnum>()"></select>
+    <select asp-for="Urgency"
+            asp-items="@Html.GetEnumSelectList<UrgenciesEnum>()"></select>
+    <select asp-for="Status"
+            asp-items="@Html.GetEnumSelectList<StatusesEnum>()" ,selectedValue></select>
+    @*<input type="text" name="Applciation" value="" />*@
+    <input type="submit" name="save" value="Save" />
+</form>

@@ -9,17 +9,6 @@ namespace CET.Models
 	{
 		private List<Ticket> Tickets { get; set; }
 
-		public void UpdateTicket(Ticket ticket, IEnumerable<Action> actions)
-		{
-			foreach (Action action in actions)
-			{
-				PropertyInfo prop = typeof(Ticket).GetProperty(action.Attribute);
-				prop.SetValue(ticket, action.NewValue);
-			}
-
-			ticket.SaveActions(actions);
-		}
-
 		public IEnumerable<Ticket> SearchTicket(string filter)
 		{
 			List<Ticket> filteredResult = new List<Ticket>();

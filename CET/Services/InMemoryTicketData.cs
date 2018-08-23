@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using static CET.Models.AttributesEnum;
 
@@ -9,10 +10,13 @@ namespace CET.Services
 {
     public class InMemoryTicketData : ITicketData
     {
-		List<Ticket> _tickets;
-		public InMemoryTicketData()
+        private IChangeLoggerData _changeLoggerData;
+        List<Ticket> _tickets;
+
+		public InMemoryTicketData(IChangeLoggerData changeLoggerData)
 		{
-			_tickets = new List<Ticket>
+            _changeLoggerData = changeLoggerData;
+            _tickets = new List<Ticket>
 			{
 				new Ticket{ Id = 1, Application = ApplicationsEnum.TheGrid, TicketType = TicketTypesEnum.Bug, Urgency = UrgenciesEnum.Regular, Status = StatusesEnum.Defined },
 				new Ticket{ Id = 2, Application = ApplicationsEnum.Approval, TicketType = TicketTypesEnum.Enhencement, Urgency = UrgenciesEnum.Critital, Status = StatusesEnum.Defined }
@@ -29,7 +33,7 @@ namespace CET.Services
 			return ticket;
 		}
 
-		public Ticket Get(int id)
+        public Ticket Get(int id)
 		{
 			return _tickets.FirstOrDefault(r => r.Id == id);
 		}
@@ -38,5 +42,10 @@ namespace CET.Services
 		{
 			return _tickets.OrderBy(r => r.CreateDate);
 		}
+
+        public Ticket Update(Ticket ticket)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -12,14 +12,17 @@ namespace CET.Controllers
 {
 	public class HomeController : Controller
 	{
-		private ITicketData _ticketData;
+        private IChangeLoggerData _changeLoggerData;
+        private ITicketData _ticketData;
 		private IGreeter _greeter;
 
-		public HomeController(ITicketData ticketData, IGreeter greeter)
+		public HomeController(IChangeLoggerData changeLoggerData, ITicketData ticketData, IGreeter greeter)
 		{
-			_ticketData = ticketData;
+            _changeLoggerData = changeLoggerData;
+            _ticketData = ticketData;
 			_greeter = greeter;
 		}
+
 		public IActionResult Index()
 		{
 			var model = new HomeIndexViewModel
@@ -30,7 +33,17 @@ namespace CET.Controllers
 
 			return View(model);
 		}
-		public IActionResult Details(int id)
+
+        public IActionResult ChangeHistory()
+        {
+            var model = new ChangeLoggerHistory
+            {
+                ChangeLoggers = _changeLoggerData.GetAll()
+            };
+
+            return View(model);
+        }
+        public IActionResult Details(int id)
 		{
 			var model = _ticketData.Get(id);
 			return View(model);
@@ -42,8 +55,15 @@ namespace CET.Controllers
 			return View();
 		}
 
-		[HttpPost]
-		public IActionResult Create(TicketEditModel model)
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            var model = _ticketData.Get(id);
+            return View(model);
+        }
+
+        [HttpPost]
+		public IActionResult Create(TicketCreateModel model)
 		{
 			var newTicket = new Ticket
 			{
@@ -53,11 +73,25 @@ namespace CET.Controllers
 			};
 
 			newTicket = _ticketData.Add(newTicket);
-
 			return RedirectToAction(nameof(Details), new { id = newTicket.Id });
 		}
 
-		public IActionResult About()
+        [HttpPost]
+        public IActionResult Update(TicketUpdateModel model)
+        {
+            Ticket oldTicket = _ticketData.Get(model.Id).Clone();
+            Ticket newTicket = _ticketData.Get(model.Id);
+            newTicket.Status = model.Status;
+            newTicket.TicketType = model.TicketType;
+            newTicket.Urgency = model.Urgency;
+            newTicket.Application = model.Application;
+
+            _changeLoggerData.GetChanges(oldTicket, newTicket);
+ 
+            return RedirectToAction(nameof(Details), new { id = newTicket.Id });
+        }
+
+        public IActionResult About()
 		{
 			ViewData["Message"] = "Your application description page.";
 

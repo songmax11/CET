@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CET.Services
 {
-    public interface ITicketData
+    public interface IChangeLoggerData
     {
-		IEnumerable<Ticket> GetAll();
-		Ticket Get(int id);
-		Ticket Add(Ticket ticket);
-        Ticket Update(Ticket ticket);
+        IEnumerable<ChangeLogger> GetAll();
+        List<ChangeLogger> GetChanges(object oldEntry, object newEntry);
     }
 }

@@ -20,3 +20,14 @@ C:\Project\CET\CET\bin\Debug\netcoreapp2.0\CET.runtimeconfig.json
 C:\Project\CET\CET\bin\Debug\netcoreapp2.0\CET.runtimeconfig.dev.json
 C:\Project\CET\CET\bin\Debug\netcoreapp2.0\CET.dll
 C:\Project\CET\CET\bin\Debug\netcoreapp2.0\CET.pdb
+C:\_code\CET\CET\bin\Debug\netcoreapp2.0\CET.deps.json
+C:\_code\CET\CET\bin\Debug\netcoreapp2.0\CET.runtimeconfig.json
+C:\_code\CET\CET\bin\Debug\netcoreapp2.0\CET.runtimeconfig.dev.json
+C:\_code\CET\CET\bin\Debug\netcoreapp2.0\CET.dll
+C:\_code\CET\CET\bin\Debug\netcoreapp2.0\CET.pdb
+C:\_code\CET\CET\obj\Debug\netcoreapp2.0\CET.csproj.CoreCompileInputs.cache
+C:\_code\CET\CET\obj\Debug\netcoreapp2.0\CET.AssemblyInfoInputs.cache
+C:\_code\CET\CET\obj\Debug\netcoreapp2.0\CET.AssemblyInfo.cs
+C:\_code\CET\CET\obj\Debug\netcoreapp2.0\CET.dll
+C:\_code\CET\CET\obj\Debug\netcoreapp2.0\CET.pdb
+C:\_code\CET\CET\obj\Debug\netcoreapp2.0\CET.csprojAssemblyReference.cache

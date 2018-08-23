@@ -1,0 +1,21 @@
+﻿@model CET.ViewModel.ChangeLoggerHistory
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+        @foreach (var log in Model.ChangeLoggers)
+        {
+            <tr>
+                <td>@log.Id</td>
+                <td>@log.ClassName</td>
+                <td>@log.PrimaryKey</td>
+                <td>@log.PropertyName</td>
+                <td>@log.OldValue</td>
+                <td>@log.NewValue</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

@@ -23,7 +23,8 @@ namespace CET
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-			services.AddSingleton<ITicketData, InMemoryTicketData>();
+            services.AddSingleton<IChangeLoggerData, InMemoryChangeLoggerData>();
+            services.AddSingleton<ITicketData, InMemoryTicketData>();
 			services.AddSingleton<IGreeter, Greeter>();
         }
 
