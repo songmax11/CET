@@ -9,5 +9,7 @@ namespace CET.Services
     public interface ITicketData
     {
 		IEnumerable<Ticket> GetAll();
+		Ticket Get(int id);
+		Ticket Add(Ticket ticket);
     }
 }

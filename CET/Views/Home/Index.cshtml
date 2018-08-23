@@ -1,12 +1,12 @@
-﻿@model IEnumerable<Ticket>
-
+﻿@model CET.ViewModel.HomeIndexViewModel
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title></title>
 </head>
 <body>
+	<h1>@Model.WelcomeMessage</h1>
 	<table>
-		@foreach (var ticket in Model)
+		@foreach (var ticket in Model.Tickets)
 		{
 		<tr>
 			<td>@ticket.Id</td>
@@ -15,9 +15,11 @@
 			<td>@ticket.Urgency</td>
 			<td>@ticket.Status</td>
 			<td>@ticket.CreateDate</td>
+			<td><a asp-action="Details" asp-route-id="@ticket.Id">More</a></td>
 		</tr>
 		}
 
 	</table>
+	<a asp-action="Create">Create New Ticket</a>
 </body>
 </html>
