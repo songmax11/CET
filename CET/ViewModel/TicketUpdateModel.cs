@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CET.Models;
 using static CET.Models.AttributesEnum;
 
 namespace CET.ViewModel
@@ -13,5 +14,5 @@ namespace CET.ViewModel
         public TicketTypesEnum TicketType { get; set; }
         public UrgenciesEnum Urgency { get; set; }
         public StatusesEnum Status { get; set; }
-    }
+	}
 }

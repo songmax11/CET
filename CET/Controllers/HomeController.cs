@@ -70,8 +70,17 @@ namespace CET.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
-            var model = _ticketData.Get(id);
-            return View(model);
+            Ticket ticket = _ticketData.Get(id);
+			var model = new TicketUpdateModel
+			{
+				Id = ticket.Id,
+				Application = ticket.Application,
+				TicketType = ticket.TicketType,
+				Urgency = ticket.Urgency,
+				Status = ticket.Status
+			};
+
+			return View(model);
         }
 
         [HttpPost]
@@ -91,10 +100,16 @@ namespace CET.Controllers
         [HttpPost]
         public IActionResult Update(TicketUpdateModel model)
         {
-            _ticketData.Update(model);
+			Ticket oldTicket = _ticketData.Get(model.Id).Clone();
+			Ticket newTicket = _ticketData.Get(model.Id);
+			newTicket.Status = model.Status;
+			newTicket.TicketType = model.TicketType;
+			newTicket.Urgency = model.Urgency;
+			newTicket.Application = model.Application;
+			_changeLoggerData.GetChanges(oldTicket, newTicket);
 
-            return RedirectToAction(nameof(Details), new { id = model.Id });
-        }
+			return RedirectToAction(nameof(Details), new { id = newTicket.Id });
+		}
 
         public IActionResult About()
         {

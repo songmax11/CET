@@ -1,15 +1,14 @@
-﻿@using CET.Models
-@using static CET.Models.AttributesEnum
-@model Ticket
+﻿@using static CET.Models.AttributesEnum
+@model CET.ViewModel.TicketCreateModel
 
 <h1> Create </h1>
 
 <form method="post">
-	<select asp-for="Application"
+	<select asp-for="App"
 			asp-items="@Html.GetEnumSelectList<ApplicationsEnum>()"></select>
 	<select asp-for="Urgency"
 			asp-items="@Html.GetEnumSelectList<UrgenciesEnum>()"></select>
-	<select asp-for="TicketType"
+	<select asp-for="Type"
 			asp-items="@Html.GetEnumSelectList<TicketTypesEnum>()"></select>
 	@*<input type="text" name="Applciation" value="" />*@
 	<input type="submit" name="save" value="Save" />
