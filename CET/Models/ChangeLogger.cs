@@ -7,7 +7,7 @@ namespace CET.Models
 {
     public class ChangeLogger
     {
-        public int Id { get; set; }
+        public int ActionId { get; set; }
         public string ClassName { get; set; }
         public string PropertyName { get; set; }
         public int PrimaryKey { get; set; }

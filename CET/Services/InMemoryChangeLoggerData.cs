@@ -60,7 +60,7 @@ namespace CET.Services
                 {
                     logs.Add(new ChangeLogger()
                     {
-                        Id = !_changeLogger.Any() ? 0 : _changeLogger.Max(r => r.Id) + 1,
+                        ActionId = _changeLogger.Any() ? _changeLogger.Max(r => r.ActionId) + 1 : 0,
                         PrimaryKey = primaryKey,
                         UpdatedDate = dateChanged,
                         ClassName = className,
