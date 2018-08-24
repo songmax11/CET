@@ -1,14 +1,16 @@
-﻿@model CET.ViewModel.HomeIndexViewModel
+﻿@model CET.ViewModel.SearchViewModel
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>Search Result</title>
 </head>
 <body>
-    <h1>@Model.WelcomeMessage</h1>
+
     <form method="get">
         <input type="text" id="searchText" name="searchText" value="" />
         <button asp-action="Search" asp-route-searchText="searchText.value">Search</button>
     </form>
+
+    <h1>Search Result for: @Model.SearchText</h1>
     <table>
         <tr>
             <td>TicketId        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
@@ -33,10 +35,6 @@
                 <td><a asp-action="Update" asp-route-id="@ticket.Id">Update</a></td>
             </tr>
         }
-
     </table>
-    <a asp-action="Create">Create New Ticket</a>
-    &nbsp &nbsp &nbsp &nbsp
-    <a asp-action="ChangeHistory">Change History Log</a>
 </body>
 </html>
