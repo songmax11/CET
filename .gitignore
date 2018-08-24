@@ -19,3 +19,4 @@ CET/obj/Debug/netcoreapp2.0/CET.pdb
 *.ide-wal
 *.ide-shm
 *.ide
+.vs/CET/v15/.suo
