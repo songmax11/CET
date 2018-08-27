@@ -1,32 +1,32 @@
 ﻿@model CET.ViewModel.ChangeLoggerHistory
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+	<title></title>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>ActionId                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>Class Changed           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>Id                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>Field Changed           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>Old Value               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>New Value               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>Updated Date            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-        </tr>
-        @foreach (var log in Model.ChangeLoggers)
-        {
+	<table>
+		<tr>
+			<td>ActionId                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>Class Changed           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>Id                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>Field Changed           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>Old Value               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>New Value               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>Updated Date            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		</tr>
+		@foreach (var log in Model.ChangeLoggers)
+		{
 
-            <tr>
-                <td>@log.ActionId</td>
-                <td>@log.ClassName</td>
-                <td>@log.PrimaryKey</td>
-                <td>@log.PropertyName</td>
-                <td>@log.OldValue</td>
-                <td>@log.NewValue</td>
-                <td>@log.UpdatedDate</td>
-            </tr>
-        }
-    </table>
+			<tr>
+				<td>@log.ActionId</td>
+				<td>@log.ClassName</td>
+				<td>@log.PrimaryKey</td>
+				<td>@log.PropertyName</td>
+				<td>@log.OldValue</td>
+				<td>@log.NewValue</td>
+				<td>@log.UpdatedDate</td>
+			</tr>
+		}
+	</table>
 </body>
 </html>

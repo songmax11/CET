@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CET.Models
 {
-    public class User
-    {
-    }
+	public class User
+	{
+	}
 }

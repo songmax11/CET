@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CET.ViewModel
 {
-    public class HomeIndexViewModel
-    {
+	public class HomeIndexViewModel
+	{
 		public IEnumerable<Ticket> Tickets { get; set; }
 		public string WelcomeMessage { get; set; }
-    }
+	}
 }

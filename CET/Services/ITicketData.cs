@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace CET.Services
 {
-    public interface ITicketData
-    {
+	public interface ITicketData
+	{
 		IEnumerable<Ticket> GetAll();
 		Ticket Get(int id);
 		Ticket Add(Ticket ticket);
-        void Update(TicketUpdateModel model);
-        IEnumerable<Ticket> Search(string searchText);
-    }
+		void Update(TicketUpdateModel model);
+		IEnumerable<Ticket> Search(string searchText);
+	}
 }

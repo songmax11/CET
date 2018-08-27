@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace CET.Services
 {
-    public interface IGreeter
-    {
+	public interface IGreeter
+	{
 		string GetWelcomeMessage();
-    }
+	}
 
 	public class Greeter : IGreeter
 	{

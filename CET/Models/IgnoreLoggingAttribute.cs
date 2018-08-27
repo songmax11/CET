@@ -2,7 +2,7 @@
 
 namespace CET.Models
 {
-    internal class IgnoreLoggingAttribute : Attribute
-    {
-    }
+	internal class IgnoreLoggingAttribute : Attribute
+	{
+	}
 }

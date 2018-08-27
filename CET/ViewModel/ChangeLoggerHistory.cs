@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace CET.ViewModel
 {
-    public class ChangeLoggerHistory
-    {
-        public IEnumerable<ChangeLogger> ChangeLoggers { get; set; }
-    }
+	public class ChangeLoggerHistory
+	{
+		public IEnumerable<ChangeLogger> ChangeLoggers { get; set; }
+	}
 }

@@ -2,7 +2,7 @@
 
 namespace CET.Models
 {
-    internal class LoggingPrimaryKeyAttribute : Attribute
-    {
-    }
+	internal class LoggingPrimaryKeyAttribute : Attribute
+	{
+	}
 }

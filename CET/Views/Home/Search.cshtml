@@ -1,40 +1,40 @@
 ﻿@model CET.ViewModel.SearchViewModel
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Search Result</title>
+	<title>Search Result</title>
 </head>
 <body>
 
-    <form method="get">
-        <input type="text" id="searchText" name="searchText" value="" />
-        <button asp-action="Search" asp-route-searchText="searchText.value">Search</button>
-    </form>
+	<form method="get">
+		<input type="text" id="searchText" name="searchText" value="" />
+		<button asp-action="Search" asp-route-searchText="searchText.value">Search</button>
+	</form>
 
-    <h1>Search Result for: @Model.SearchText</h1>
-    <table>
-        <tr>
-            <td>TicketId        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>Applcation Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>TicketType      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>Urgency         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>Status          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td>CreateDate      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-        </tr>
-        @foreach (var ticket in Model.Tickets)
-        {
-            <tr>
-                <td>@ticket.Id</td>
-                <td>@ticket.Application</td>
-                <td>@ticket.TicketType</td>
-                <td>@ticket.Urgency</td>
-                <td>@ticket.Status</td>
-                <td>@ticket.CreateDate</td>
-                <td>&nbsp &nbsp &nbsp &nbsp</td>
-                <td><a asp-action="Details" asp-route-id="@ticket.Id">More</a></td>
-                <td>&nbsp &nbsp &nbsp &nbsp</td>
-                <td><a asp-action="Update" asp-route-id="@ticket.Id">Update</a></td>
-            </tr>
-        }
-    </table>
+	<h1>Search Result for: @Model.SearchText</h1>
+	<table>
+		<tr>
+			<td>TicketId        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>Applcation Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>TicketType      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>Urgency         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>Status          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+			<td>CreateDate      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		</tr>
+		@foreach (var ticket in Model.Tickets)
+		{
+			<tr>
+				<td>@ticket.Id</td>
+				<td>@ticket.Application</td>
+				<td>@ticket.TicketType</td>
+				<td>@ticket.Urgency</td>
+				<td>@ticket.Status</td>
+				<td>@ticket.CreateDate</td>
+				<td>&nbsp &nbsp &nbsp &nbsp</td>
+				<td><a asp-action="Details" asp-route-id="@ticket.Id">More</a></td>
+				<td>&nbsp &nbsp &nbsp &nbsp</td>
+				<td><a asp-action="Update" asp-route-id="@ticket.Id">Update</a></td>
+			</tr>
+		}
+	</table>
 </body>
 </html>

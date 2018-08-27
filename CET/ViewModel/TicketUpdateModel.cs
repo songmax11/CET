@@ -7,13 +7,13 @@ using static CET.Models.AttributesEnum;
 
 namespace CET.ViewModel
 {
-    public class TicketUpdateModel
-    {
-        public int Id { get; set; }
-        public ApplicationsEnum Application { get; set; }
-        public TicketTypesEnum TicketType { get; set; }
-        public UrgenciesEnum Urgency { get; set; }
-        public StatusesEnum Status { get; set; }
+	public class TicketUpdateModel
+	{
+		public int Id { get; set; }
+		public ApplicationsEnum Application { get; set; }
+		public TicketTypesEnum TicketType { get; set; }
+		public UrgenciesEnum Urgency { get; set; }
+		public StatusesEnum Status { get; set; }
 		public string Description { get; set; }
 	}
 }
