@@ -12,6 +12,13 @@
 			asp-items="@Html.GetEnumSelectList<UrgenciesEnum>()"></select>
 	<select asp-for="Status"
 			asp-items="@Html.GetEnumSelectList<StatusesEnum>()"></select>
+	<br />
+	<br />
+	<label>Description</label>
+	<p>
+		<textarea asp-for="Description">@Model.Description</textarea>
+		@*<textarea name="description" rows="4" cols="50"></textarea>*@
+	</p>
 	@*<input type="text" name="Applciation" value="" />*@
 	<input type="submit" name="save" value="Save" />
 </form>

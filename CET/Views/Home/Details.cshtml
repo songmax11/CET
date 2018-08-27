@@ -2,10 +2,30 @@
 
 <h1>CET @Model.Id</h1>
 
-<div>@Model.Application</div>
-<div>@Model.TicketType</div>
-<div>@Model.Status</div>
-<div>@Model.Urgency</div>
-<div>@Model.CreateDate</div>
+<table>
+	<tr>
+		<td><label>Applcation Name</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		<td><label>TicketType</label>      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		<td><label>Urgency</label>         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		<td><label>Status</label>          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		<td><label>CreateDate</label>      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+	</tr>
+	<tr>
+		<td>@Model.Application</td>
+		<td>@Model.TicketType</td>
+		<td>@Model.Urgency</td>
+		<td>@Model.Status</td>
+		<td>@Model.CreateDate</td>
+	</tr>
+</table>
+<p>
+	<br>
+	<br>
+	<label>Description</label>
+	<br>
+	@Model.Description
+</p>
+
+
 
 <a asp-action="Index" asp-controller="Home">Home</a>

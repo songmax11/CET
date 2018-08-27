@@ -10,6 +10,7 @@ namespace CET.Models
         public StatusesEnum Status { get; set; }
         public TicketTypesEnum TicketType { get; set; }
         public UrgenciesEnum Urgency { get; set; }
+		public string Description { get; set; } 
         //public User Owner { get; set; }
         //public User Submitter { get; set; }
         [IgnoreLogging]

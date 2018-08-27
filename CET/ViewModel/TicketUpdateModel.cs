@@ -14,5 +14,6 @@ namespace CET.ViewModel
         public TicketTypesEnum TicketType { get; set; }
         public UrgenciesEnum Urgency { get; set; }
         public StatusesEnum Status { get; set; }
+		public string Description { get; set; }
 	}
 }

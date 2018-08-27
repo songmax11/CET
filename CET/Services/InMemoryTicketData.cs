@@ -19,8 +19,8 @@ namespace CET.Services
 			_changeLoggerData = changeLoggerData;
 			_tickets = new List<Ticket>
 			{
-				new Ticket{ Id = 1, Application = ApplicationsEnum.TheGrid, TicketType = TicketTypesEnum.Bug, Urgency = UrgenciesEnum.Regular, Status = StatusesEnum.Defined },
-				new Ticket{ Id = 2, Application = ApplicationsEnum.Approval, TicketType = TicketTypesEnum.Enhencement, Urgency = UrgenciesEnum.Critital, Status = StatusesEnum.Defined }
+				new Ticket{ Id = 1, Application = ApplicationsEnum.TheGrid, TicketType = TicketTypesEnum.Bug, Urgency = UrgenciesEnum.Regular, Status = StatusesEnum.Defined, Description = "typo" },
+				new Ticket{ Id = 2, Application = ApplicationsEnum.Approval, TicketType = TicketTypesEnum.Enhencement, Urgency = UrgenciesEnum.Critital, Status = StatusesEnum.Defined, Description = "save is not working" }
 			};
 		}
 
@@ -53,6 +53,7 @@ namespace CET.Services
 			updatingTicket.Urgency = model.Urgency;
 			updatingTicket.TicketType = model.TicketType;
 			updatingTicket.Status = model.Status;
+			updatingTicket.Description = model.Description;
 
 			_changeLoggerData.GetChanges(oldTicket, updatingTicket);
 		}

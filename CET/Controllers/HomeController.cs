@@ -77,7 +77,8 @@ namespace CET.Controllers
 				Application = ticket.Application,
 				TicketType = ticket.TicketType,
 				Urgency = ticket.Urgency,
-				Status = ticket.Status
+				Status = ticket.Status,
+				Description = ticket.Description
 			};
 
 			return View(model);
@@ -90,7 +91,8 @@ namespace CET.Controllers
             {
                 Application = model.App,
                 TicketType = model.Type,
-                Urgency = model.Urgency
+                Urgency = model.Urgency,
+				Description = model.Description
             };
 
             newTicket = _ticketData.Add(newTicket);
@@ -106,6 +108,7 @@ namespace CET.Controllers
 			newTicket.TicketType = model.TicketType;
 			newTicket.Urgency = model.Urgency;
 			newTicket.Application = model.Application;
+			newTicket.Description = model.Description;
 			_changeLoggerData.GetChanges(oldTicket, newTicket);
 
 			return RedirectToAction(nameof(Details), new { id = newTicket.Id });
