@@ -27,7 +27,8 @@ namespace CET.Models
 				Status = Status,
 				TicketType = TicketType,
 				Urgency = Urgency,
-				CreateDate = CreateDate
+				CreateDate = CreateDate,
+                Description = Description
 			};
 
 			return res;
